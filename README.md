@@ -1,6 +1,6 @@
 # Azure DevOps Service Connection Audit & Clean-Up Toolkit
 
-This repository provides two PowerShell scripts for auditing, cleaning up, and modernizing Azure DevOps service connections, with a focus on migrating from legacy Service Principal authentication to Workload Identity Federation (WIF).
+This repository provides two PowerShell scripts for auditing, cleaning up, and updating Azure DevOps service connections, with a focus on migrating from legacy Service Principal authentication to Workload Identity Federation (WIF).
 
 ---
 
@@ -43,11 +43,12 @@ Interactively manages Azure DevOps service connections, including conversion to 
 **Usage:**
 1. Ensure you have the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) installed and authenticated.
 2. Update the `$OrganizationUrl` variable with your Azure DevOps organization URL.
-3. Run the script in PowerShell:
+3. Update the `$json` variable with the details you want to add to your Service Connections.
+4. Run the script in PowerShell:
    ```powershell
    .\azdo-service-connection-cleanup.ps1
    ```
-4. Follow the interactive prompts to audit, convert, or clean up service connections.
+5. Follow the interactive prompts to audit, convert, or clean up service connections.
 
 ---
 
@@ -55,7 +56,7 @@ Interactively manages Azure DevOps service connections, including conversion to 
 
 - PowerShell 7.x recommended
 - Azure CLI installed and logged in (`az login`)
-- Sufficient permissions in Azure DevOps and Azure AD to read and modify service connections and service principals
+- Sufficient permissions in Azure DevOps and Azure Entra to read and modify service connections and service principals
 
 ---
 
@@ -63,19 +64,13 @@ Interactively manages Azure DevOps service connections, including conversion to 
 
 - **Sensitive Data:**  
   The scripts process project names, subscription IDs, and service principal IDs. Review and redact any sensitive information before sharing outputs.
-- **Customization:**  
+- **Customisation:**  
   Update organization-specific variables (e.g., `$OrganizationUrl`) as needed.
 - **Excel Export:**  
   The investigation script uses `Export-Excel`. Install the [ImportExcel PowerShell module](https://github.com/dfinke/ImportExcel) if not already present:
   ```powershell
   Install-Module -Name ImportExcel -Scope CurrentUser
   ```
-
----
-
-## License
-
-MIT License
 
 ---
 
