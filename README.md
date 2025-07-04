@@ -6,7 +6,7 @@ This repository provides two PowerShell scripts for auditing, cleaning up, and m
 
 ## Scripts
 
-### 1. wif-investigation.ps1
+### 1. [wif-investigation.ps1](./wif-investigation.ps1)
 
 **Purpose:**  
 Audits all Azure DevOps service connections in your organization and provides actionable recommendations for each connection.
@@ -29,8 +29,7 @@ Audits all Azure DevOps service connections in your organization and provides ac
 
 ---
 
-### 2. convert-to-wif.ps1 (or `service-connection-lifecycle-manager.ps1`)
-
+### 2. [azdo-service-connection-cleanup.ps1](./azdo-service-connection-cleanup.ps1)
 **Purpose:**  
 Interactively manages Azure DevOps service connections, including conversion to WIF, deletion of orphaned connections, and cleanup of unused service principals.
 
