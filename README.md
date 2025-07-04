@@ -14,13 +14,13 @@ Service connections are critical for pipelines to access Azure resources. Over t
 
 ## The Investigation Script
 The script I used automates the following:
-- Enumerates all projects in the Azure DevOps organization.
-- Lists all AzureRM service connections for each project.
-- Cross-references each connection’s subscription and service principal with Azure and Microsoft Graph.
-- Checks for missing or orphaned resources (e.g., subscriptions, SPNs, secrets).
-- Recommends actions: delete, investigate, or convert to WIF.
+- **Enumerates all projects** in the Azure DevOps organization.
+- **Lists all AzureRM service connections** for each project.
+- **Cross-references** each connection’s subscription and service principal with Azure and Microsoft Graph.
+- **Checks for missing or orphaned resources** (e.g., subscriptions, SPNs, secrets).
+- **Recommends actions: delete**, investigate, or convert to WIF.
 
-You can find the full investigation script on [GitHub}().
+You can find the **full investigation script** on [GitHub}().
 
 ## Example: Key Excerpt from the Investigation Script
 ```pwsh
@@ -63,10 +63,10 @@ foreach ($serviceEndpoint in $serviceEndpoints) {
 
 ## What the Script Finds
 The script outputs an Excel file with all service connections, their status, and recommended actions. Typical findings include:
-- Orphaned connections (missing subscription or SPN)
-- Connections with no secrets (potentially broken)
-- Legacy Service Principal connections (candidates for WIF conversion)
-- Unused connections (safe to delete)
+- **Orphaned connections** (missing subscription or SPN)
+- **Connections with no secrets** (potentially broken)
+- **Legacy Service Principal connections** (candidates for WIF conversion)
+- **Unused connections** (safe to delete)
 
 ## Converting Service Connections to WIF with PowerShell
 After identifying which Azure DevOps service connections should be converted to Workload Identity Federation (WIF), I used a PowerShell script to automate the conversion process. This script allows you to interactively select projects and service connections, check their status, and convert eligible connections to WIF.
@@ -83,7 +83,7 @@ After identifying which Azure DevOps service connections should be converted to 
 - **Provides clear feedback**  
   Each step outputs status and prompts for confirmation before making changes.
 
-You can find the full conversion script on [GitHub}().
+You can find the **full conversion script** on [GitHub}().
 
 ## Example: Key Steps from the Conversion Script
 ```pwsh
