@@ -45,7 +45,7 @@ Interactively manages Azure DevOps service connections, including conversion to 
 2. Update the `$OrganizationUrl` variable with your Azure DevOps organization URL.
 3. Run the script in PowerShell:
    ```powershell
-   .\convert-to-wif.ps1
+   .\azdo-service-connection-cleanup.ps1
    ```
 4. Follow the interactive prompts to audit, convert, or clean up service connections.
 
