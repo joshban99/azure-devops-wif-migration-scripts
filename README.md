@@ -1,4 +1,4 @@
-# Azure DevOps Service Connection Audit & Modernization Toolkit
+# Azure DevOps Service Connection Audit & Clean-Up Toolkit
 
 This repository provides two PowerShell scripts for auditing, cleaning up, and modernizing Azure DevOps service connections, with a focus on migrating from legacy Service Principal authentication to Workload Identity Federation (WIF).
 
