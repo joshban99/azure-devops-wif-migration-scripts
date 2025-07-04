@@ -140,9 +140,9 @@ while ($true) {
 1. Check the output for success or error messages.
    
 ## Benefits
-Reduces manual effort in migrating to WIF.
-Ensures only valid, in-use connections are converted.
-Cleans up orphaned or unused service principals and connections.
+- Reduces manual effort in migrating to WIF.
+- Ensures only valid, in-use connections are converted.
+- Cleans up orphaned or unused service principals and connections.
 
 ## Conclusion
 Automating the investigation and migration of Azure DevOps service connections to Workload Identity Federation (WIF) streamlines your DevOps security and management practices. By leveraging PowerShell scripts, you can efficiently audit all service connections, identify outdated or orphaned resources, and convert eligible connections to WIF with minimal manual effort. This not only reduces the risk associated with credential sprawl and secret management but also aligns your pipelines with modern, secure authentication standards.
